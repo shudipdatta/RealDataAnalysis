@@ -1,3 +1,5 @@
 
-src/IntermediateData/
-src/reports/
+/bin/
+src/asturies-er-1year-10m_shifted.one
+src/geolife.one
+src/haggle-one-infocom2006-complete.tsv

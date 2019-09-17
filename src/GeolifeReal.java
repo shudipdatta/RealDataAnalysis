@@ -378,7 +378,7 @@ public class GeolifeReal {
 	public static void NodeMobility() throws NumberFormatException, IOException {
 		HashMap<Integer, Integer> nodes = new HashMap<Integer, Integer>();
 		
-		FileInputStream fstream = new FileInputStream("src/geolife_1000.one");
+		FileInputStream fstream = new FileInputStream("src/geolife.one");
 		BufferedReader br = new BufferedReader(new InputStreamReader(fstream));
 
 		String strLine;
@@ -401,12 +401,12 @@ public class GeolifeReal {
 			  }
 
 			  //this for getting highest number of contacts
-			  nodes.put(n1, nodes.get(n1)+1);
-			  nodes.put(n2, nodes.get(n2)+1);
+//			  nodes.put(n1, nodes.get(n1)+1);
+//			  nodes.put(n2, nodes.get(n2)+1);
 			  
 			  //this is for getting highest timestamp contacts
-//			  nodes.put(n1, ts);
-//			  nodes.put(n2, ts);
+			  nodes.put(n1, ts);
+			  nodes.put(n2, ts);
 		  }
 		}
 

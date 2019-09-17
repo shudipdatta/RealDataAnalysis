@@ -65,6 +65,7 @@ public class Infocom {
 		  if(strs.length == 5) {
 			  int n1 = Integer.parseInt(strs[2]);
 			  int n2 = Integer.parseInt(strs[3]);
+			  int ts = (int)Double.parseDouble(strs[0]);
 			  
 			  if(nodes.containsKey(n1) == false) {
 				  nodes.put(n1, 0);
@@ -73,9 +74,14 @@ public class Infocom {
 			  if(nodes.containsKey(n2) == false) {
 				  nodes.put(n2, 0);
 			  }
-
+			  
+			  //this for getting highest number of contacts
 			  nodes.put(n1, nodes.get(n1)+1);
 			  nodes.put(n2, nodes.get(n2)+1);
+			  
+			  //this is for getting highest timestamp contacts
+//			  nodes.put(n1, ts);
+//			  nodes.put(n2, ts);
 		  }
 		}
 
@@ -93,9 +99,9 @@ public class Infocom {
             }
 	    );
 		
-		for(Entry<Integer, Integer> e: sortedNodes) {
-			//System.out.println(e.getKey() + "\t" + e.getValue());
-			System.out.println(e.getKey());
+	    for(Entry<Integer, Integer> e: sortedNodes) {
+			//System.out.println(e.getKey());
+			System.out.println(e.getKey() + "\t" + e.getValue());
 		}
 	}
 
